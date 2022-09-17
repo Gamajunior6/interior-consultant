@@ -1,0 +1,89 @@
+*, *::before, *::after{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    width:100vw;
+}
+
+.logo{
+    margin: 0.5rem;
+}
+
+.nav_links {
+    display: flex;
+    list-style: none;
+}
+
+.nav_links li a{
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 2rem;
+    padding:1rem;
+    color: white;
+}
+
+.nav_links li a:hover{
+    background:#555;
+}
+
+.nav_links li{
+    padding:5px 14px;
+}
+
+
+input[type=checkbox]{
+    display: none;
+}
+
+.hamburger{
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    display: none;
+    position: absolute;
+    right:0;
+    margin: 0.5rem;
+
+}
+
+
+@media screen and (max-width:600px){
+    .hamburger{
+        display: block;
+    }
+
+    .nav_link{
+        position: fixed;
+        top:50px;
+        left:-100%;
+        width: 100%;
+        height: 100vh;
+        background: #8674;
+        text-align:center;
+        transition:all 0.5s;
+    }
+
+    .nav_link li a{
+        display: block;
+        margin:50px 0;
+    }
+
+    input[type=checkbox]{
+        display: none;
+        left: 0;
+    }
+    
+
+}
